@@ -47,7 +47,7 @@ class BTCViewController: UIViewController, BTCViewModelOutput {
     
     
     
-    //I know this is Bad Code Im having trouble how to update the labels properly without createing a new view
+    //I know this is Bad Code Im having trouble on how to update the labels properly without creating a new view
     
     
     func updateView(usdPrice: Double, eurPrice: Double, jpyPrice: Double) {

@@ -9,10 +9,13 @@ import UIKit
 
 class BTCNewViewController: UIViewController, BTCViewModelOutput {
     
-    let bitcoinImageView = {
-        let imageView = UIImageView(image: UIImage(named: "bitcoin"))
-        imageView.translatesAutoresizingMaskIntoConstraints = false
-        return imageView
+    let bitcoinImageViewButton = {
+        let btn = UIButton(type: .custom)
+        btn.setImage(UIImage(named: "bitcoin"), for: .normal)
+//        let imageView = UIImageView(image: UIImage(named: "bitcoin"))
+        btn.addTarget(self, action: #selector(refreshPrice), for: .touchUpInside)
+        btn.translatesAutoresizingMaskIntoConstraints = false
+        return btn
     }()
     
     let usdLabel: UILabel = {
@@ -69,6 +72,9 @@ class BTCNewViewController: UIViewController, BTCViewModelOutput {
         viewModel.getPrice()
     }
     
+    @objc func refreshPrice() {
+        viewModel.getPrice()
+    }
 
     func updateView(usdPrice: Double, eurPrice: Double, jpyPrice: Double) {
         
@@ -80,23 +86,23 @@ class BTCNewViewController: UIViewController, BTCViewModelOutput {
     func setupViews() {
         
         view.backgroundColor = .white
-        view.addSubview(bitcoinImageView)
+        view.addSubview(bitcoinImageViewButton)
         view.addSubview(usdLabel)
         view.addSubview(eurLabel)
         view.addSubview(jpyLabel)
         
         NSLayoutConstraint.activate([
-            bitcoinImageView.centerXAnchor.constraint(equalTo: view.centerXAnchor, constant: 0),
-            bitcoinImageView.centerYAnchor.constraint(equalTo: view.centerYAnchor, constant: 0),
-            bitcoinImageView.widthAnchor.constraint(equalToConstant: 300),
-            bitcoinImageView.heightAnchor.constraint(equalToConstant: 300),
+            bitcoinImageViewButton.centerXAnchor.constraint(equalTo: view.centerXAnchor, constant: 0),
+            bitcoinImageViewButton.centerYAnchor.constraint(equalTo: view.centerYAnchor, constant: 0),
+            bitcoinImageViewButton.widthAnchor.constraint(equalToConstant: 300),
+            bitcoinImageViewButton.heightAnchor.constraint(equalToConstant: 300),
             
             usdLabel.topAnchor.constraint(equalTo: view.topAnchor, constant: 100),
-            usdLabel.bottomAnchor.constraint(equalTo: bitcoinImageView.topAnchor, constant: 10),
+            usdLabel.bottomAnchor.constraint(equalTo: bitcoinImageViewButton.topAnchor, constant: 10),
             usdLabel.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 1),
             usdLabel.rightAnchor.constraint(equalTo: view.rightAnchor, constant: 1),
             
-            eurLabel.topAnchor.constraint(equalTo: bitcoinImageView.bottomAnchor, constant: 24),
+            eurLabel.topAnchor.constraint(equalTo: bitcoinImageViewButton.bottomAnchor, constant: 24),
             eurLabel.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 1),
             eurLabel.rightAnchor.constraint(equalTo: view.rightAnchor, constant: 1),
             

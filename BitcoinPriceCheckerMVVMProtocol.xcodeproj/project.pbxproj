@@ -18,6 +18,7 @@
 		EEC6350D29AE76100092FF15 /* BTCViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEC6350C29AE76100092FF15 /* BTCViewController.swift */; };
 		EEC6351229AE76120092FF15 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EEC6351129AE76120092FF15 /* Assets.xcassets */; };
 		EEC6351529AE76120092FF15 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EEC6351329AE76120092FF15 /* LaunchScreen.storyboard */; };
+		EEE2643C2C7B02F600D51898 /* BTCNewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE2643B2C7B02F600D51898 /* BTCNewViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		EEC6351129AE76120092FF15 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EEC6351429AE76120092FF15 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EEC6351629AE76120092FF15 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EEE2643B2C7B02F600D51898 /* BTCNewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BTCNewViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +55,7 @@
 				EEC6350C29AE76100092FF15 /* BTCViewController.swift */,
 				EEA865B129AE9D76001762FF /* BTCPageViews.swift */,
 				EEB8038529AEA21200BDBD1B /* PageElementsAutoLayout.swift */,
+				EEE2643B2C7B02F600D51898 /* BTCNewViewController.swift */,
 			);
 			path = BBTCViews;
 			sourceTree = "<group>";
@@ -181,6 +184,7 @@
 				EEB8038829AEA74C00BDBD1B /* PageElementsModel.swift in Sources */,
 				EEB8039129AEB07500BDBD1B /* NetworkService.swift in Sources */,
 				EEB8038F29AEAEB100BDBD1B /* BTCViewModel.swift in Sources */,
+				EEE2643C2C7B02F600D51898 /* BTCNewViewController.swift in Sources */,
 				EEB8038629AEA21200BDBD1B /* PageElementsAutoLayout.swift in Sources */,
 				EEA865B229AE9D76001762FF /* BTCPageViews.swift in Sources */,
 				EEC6350929AE76100092FF15 /* AppDelegate.swift in Sources */,

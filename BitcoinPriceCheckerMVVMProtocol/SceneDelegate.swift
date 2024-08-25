@@ -23,7 +23,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         let btcService: NetworkService = APIManager()
         let viewModel = BTCViewModel(networkService: btcService)
-        window?.rootViewController = UINavigationController(rootViewController: BTCViewController(viewModel: viewModel))
+        window?.rootViewController = UINavigationController(rootViewController: BTCNewViewController(viewModel: viewModel))
         window?.makeKeyAndVisible()
         
         

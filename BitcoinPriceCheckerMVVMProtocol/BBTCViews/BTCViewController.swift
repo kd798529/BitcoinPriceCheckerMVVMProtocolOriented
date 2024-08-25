@@ -30,16 +30,16 @@ class BTCViewController: UIViewController, BTCViewModelOutput {
         
         
         view.backgroundColor = .white
-        let pageModel = PageElementsModel()
-        pageModel.loadViewModels(view: self.view)
-        let bitcoinLogo = PageElementsAutoLayout()
-        bitcoinLogo.setUpAutoLayoutForPageElements(item: .bitcoinImage, label: pageModel.viewModels[2] as! UILabel, view: view, imgView: pageModel.viewModels[0] as! UIImageView, secondaryLabel: pageModel.viewModels[2] as! UILabel)
-        let usdLabel = PageElementsAutoLayout()
-        usdLabel.setUpAutoLayoutForPageElements(item: .usdLabel, label: pageModel.viewModels[1] as! UILabel, view: view, imgView: pageModel.viewModels[0] as! UIImageView, secondaryLabel: pageModel.viewModels[2] as! UILabel)
-        let eurLabel = PageElementsAutoLayout()
-        eurLabel.setUpAutoLayoutForPageElements(item: .eurLabel, label: pageModel.viewModels[2] as! UILabel, view: view, imgView: pageModel.viewModels[0] as! UIImageView, secondaryLabel: pageModel.viewModels[2] as! UILabel)
-        let jpyLabel = PageElementsAutoLayout()
-        jpyLabel.setUpAutoLayoutForPageElements(item: .eurLabel, label: pageModel.viewModels[3] as! UILabel, view: view, imgView: pageModel.viewModels[0] as! UIImageView, secondaryLabel: pageModel.viewModels[2] as! UILabel)
+//        let pageModel = PageElementsModel()
+//        pageModel.loadViewModels(view: self.view)
+//        let bitcoinLogo = PageElementsAutoLayout()
+//        bitcoinLogo.setUpAutoLayoutForPageElements(item: .bitcoinImage, label: pageModel.viewModels[2] as! UILabel, view: view, imgView: pageModel.viewModels[0] as! UIImageView, secondaryLabel: pageModel.viewModels[2] as! UILabel)
+//        let usdLabel = PageElementsAutoLayout()
+//        usdLabel.setUpAutoLayoutForPageElements(item: .usdLabel, label: pageModel.viewModels[1] as! UILabel, view: view, imgView: pageModel.viewModels[0] as! UIImageView, secondaryLabel: pageModel.viewModels[2] as! UILabel)
+//        let eurLabel = PageElementsAutoLayout()
+//        eurLabel.setUpAutoLayoutForPageElements(item: .eurLabel, label: pageModel.viewModels[2] as! UILabel, view: view, imgView: pageModel.viewModels[0] as! UIImageView, secondaryLabel: pageModel.viewModels[2] as! UILabel)
+//        let jpyLabel = PageElementsAutoLayout()
+//        jpyLabel.setUpAutoLayoutForPageElements(item: .eurLabel, label: pageModel.viewModels[3] as! UILabel, view: view, imgView: pageModel.viewModels[0] as! UIImageView, secondaryLabel: pageModel.viewModels[2] as! UILabel)
         
         viewModel.getPrice()
         

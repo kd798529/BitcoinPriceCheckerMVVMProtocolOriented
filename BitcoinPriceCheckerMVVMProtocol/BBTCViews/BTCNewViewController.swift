@@ -9,7 +9,7 @@ import UIKit
 
 class BTCNewViewController: UIViewController, BTCViewModelOutput {
     
-    let bitcoinImageViewButton = {
+    let bitcoinImageViewButton: UIButton = {
         let btn = UIButton(type: .custom)
         btn.setImage(UIImage(named: "bitcoin"), for: .normal)
 //        let imageView = UIImageView(image: UIImage(named: "bitcoin"))

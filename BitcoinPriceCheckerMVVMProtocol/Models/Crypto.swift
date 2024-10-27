@@ -7,7 +7,14 @@
 
 import Foundation
 
-struct Crypto {
-    var symbol: String
-    var imageName: String
+struct Crypto: Codable {
+    var BTC: Currency
+    var LTC: Currency
+    var XMR: Currency
+    
+   private enum CodingKeys: String, CodingKey {
+        case BTC
+        case LTC
+        case XMR
+    }
 }

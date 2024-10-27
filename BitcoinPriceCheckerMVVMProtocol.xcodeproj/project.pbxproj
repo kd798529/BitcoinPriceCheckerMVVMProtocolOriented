@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EE9D4C5B2CBF92170002308A /* ErrorList.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE9D4C5A2CBF91F80002308A /* ErrorList.swift */; };
+		EE9D4C5D2CC0DA4D0002308A /* CryptoCurrency.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE9D4C5C2CC0DA440002308A /* CryptoCurrency.swift */; };
 		EEA540932C85672400EDBD98 /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEA540922C85672400EDBD98 /* CustomCell.swift */; };
 		EEA540952C857C6600EDBD98 /* Crypto.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEA540942C857C6600EDBD98 /* Crypto.swift */; };
 		EEA865B229AE9D76001762FF /* BTCPageViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEA865B129AE9D76001762FF /* BTCPageViews.swift */; };
@@ -22,9 +24,12 @@
 		EEC6351529AE76120092FF15 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EEC6351329AE76120092FF15 /* LaunchScreen.storyboard */; };
 		EEE2643C2C7B02F600D51898 /* BTCNewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE2643B2C7B02F600D51898 /* BTCNewViewController.swift */; };
 		EEED1B4D2C84416900327733 /* LandingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEED1B4C2C84416900327733 /* LandingViewController.swift */; };
+		EEF309412CC47EF3009E7AD2 /* LandingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEF309402CC47ECD009E7AD2 /* LandingViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		EE9D4C5A2CBF91F80002308A /* ErrorList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorList.swift; sourceTree = "<group>"; };
+		EE9D4C5C2CC0DA440002308A /* CryptoCurrency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoCurrency.swift; sourceTree = "<group>"; };
 		EEA540922C85672400EDBD98 /* CustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCell.swift; sourceTree = "<group>"; };
 		EEA540942C857C6600EDBD98 /* Crypto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Crypto.swift; sourceTree = "<group>"; };
 		EEA865B129AE9D76001762FF /* BTCPageViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BTCPageViews.swift; sourceTree = "<group>"; };
@@ -42,6 +47,7 @@
 		EEC6351629AE76120092FF15 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EEE2643B2C7B02F600D51898 /* BTCNewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BTCNewViewController.swift; sourceTree = "<group>"; };
 		EEED1B4C2C84416900327733 /* LandingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingViewController.swift; sourceTree = "<group>"; };
+		EEF309402CC47ECD009E7AD2 /* LandingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +77,7 @@
 		EEB8038929AEA9AD00BDBD1B /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				EE9D4C5C2CC0DA440002308A /* CryptoCurrency.swift */,
 				EEB8038729AEA74C00BDBD1B /* PageElementsModel.swift */,
 				EEB8039229AEB17000BDBD1B /* Currency.swift */,
 				EEA540942C857C6600EDBD98 /* Crypto.swift */,
@@ -81,6 +88,7 @@
 		EEB8038D29AEAE9400BDBD1B /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				EEF309402CC47ECD009E7AD2 /* LandingViewModel.swift */,
 				EEB8038E29AEAEB100BDBD1B /* BTCViewModel.swift */,
 			);
 			path = ViewModels;
@@ -105,6 +113,7 @@
 		EEC6350729AE76100092FF15 /* BitcoinPriceCheckerMVVMProtocol */ = {
 			isa = PBXGroup;
 			children = (
+				EE9D4C5A2CBF91F80002308A /* ErrorList.swift */,
 				EEC6350829AE76100092FF15 /* AppDelegate.swift */,
 				EEC6350A29AE76100092FF15 /* SceneDelegate.swift */,
 				EEB8038929AEA9AD00BDBD1B /* Models */,
@@ -196,10 +205,13 @@
 				EEB8038F29AEAEB100BDBD1B /* BTCViewModel.swift in Sources */,
 				EEE2643C2C7B02F600D51898 /* BTCNewViewController.swift in Sources */,
 				EEB8038629AEA21200BDBD1B /* PageElementsAutoLayout.swift in Sources */,
+				EE9D4C5B2CBF92170002308A /* ErrorList.swift in Sources */,
 				EEA865B229AE9D76001762FF /* BTCPageViews.swift in Sources */,
+				EEF309412CC47EF3009E7AD2 /* LandingViewModel.swift in Sources */,
 				EEA540952C857C6600EDBD98 /* Crypto.swift in Sources */,
 				EEC6350929AE76100092FF15 /* AppDelegate.swift in Sources */,
 				EEA540932C85672400EDBD98 /* CustomCell.swift in Sources */,
+				EE9D4C5D2CC0DA4D0002308A /* CryptoCurrency.swift in Sources */,
 				EEC6350B29AE76100092FF15 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

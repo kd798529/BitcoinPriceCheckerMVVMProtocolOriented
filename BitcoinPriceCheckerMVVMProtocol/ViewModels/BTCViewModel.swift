@@ -21,7 +21,7 @@ class BTCViewModel {
     }
     
     func getPrice() {
-         networkService.getPrice{ [weak self] result in
+         networkService.getPrice { [weak self] result in
             switch result {
             case .success(let prices):
                 self?.output?.updateView(usdPrice: prices?.USD ?? 0.00, eurPrice: prices?.EUR ?? 0.00, jpyPrice: prices?.JPY ?? 0.00)

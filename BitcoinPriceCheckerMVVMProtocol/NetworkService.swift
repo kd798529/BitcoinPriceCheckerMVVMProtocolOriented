@@ -9,9 +9,11 @@ import Foundation
 
 protocol NetworkService {
     func getPrice(completion: @escaping (Result<Currency?, Error>) -> Void)
+    func getCryptoList() async throws ->  Crypto
 }
 
 class APIManager: NetworkService {
+    
     func getPrice(completion: @escaping (Result<Currency?, Error>) -> Void) {
         
         var currencyData: Currency?
@@ -40,18 +42,38 @@ class APIManager: NetworkService {
                 print(final.USD)
                 print(final.EUR)
                 print(final.JPY)
-                
-                
+                                
                 currencyData?.USD = final.USD
                 currencyData?.EUR = final.EUR
                 currencyData?.JPY = final.JPY
-                
-                
             }
         }
         
         task.resume()
        
+        
+    }
+    
+    func getCryptoList() async throws ->  Crypto {
+        
+        let endpoint = "https://min-api.cryptocompare.com/data/pricemulti?fsyms=BTC,LTC,XMR&tsyms=USD,EUR,JPY"
+        
+        guard let url = URL(string: endpoint) else {
+            throw CryptoError.invalidURL
+        }
+        
+        let (data, response) = try await URLSession.shared.data(from: url)
+        
+        guard let response = response as? HTTPURLResponse, response.statusCode == 200 else {
+            throw CryptoError.invalidResponse
+        }
+        
+        do {
+            let decoder = JSONDecoder()
+            return try decoder.decode(Crypto.self, from: data)
+        } catch {
+            throw CryptoError.invalidData
+        }
         
     }
 }

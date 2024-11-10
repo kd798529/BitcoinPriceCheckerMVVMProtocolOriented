@@ -59,6 +59,9 @@ class LandingViewController: UIViewController, LandingViewModelOutput {
         self.availableCurrencies[0].crypto = BTC
         self.availableCurrencies[1].crypto = LTC
         self.availableCurrencies[2].crypto = XMR
+        DispatchQueue.main.async {
+            self.tableView.reloadData()
+        }
     }
 
     func setupViews() {

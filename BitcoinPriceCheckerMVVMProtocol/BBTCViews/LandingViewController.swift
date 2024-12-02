@@ -19,6 +19,12 @@ class LandingViewController: UIViewController, LandingViewModelOutput {
         tv.allowsSelection = true
         tv.register(CustomCell.self, forCellReuseIdentifier: CustomCell.identifier)
         tv.translatesAutoresizingMaskIntoConstraints = false
+        
+        //handles page refreshing of new prices
+        let refreshControl = UIRefreshControl()
+        refreshControl.addTarget(self, action: #selector(handleRefreshcontrol), for: .valueChanged)
+        tv.refreshControl = refreshControl
+        
         return tv
     }()
     
@@ -39,7 +45,6 @@ class LandingViewController: UIViewController, LandingViewModelOutput {
 
         
         setupViews()
-        
 
         self.tableView.delegate = self
         self.tableView.dataSource = self
@@ -49,7 +54,7 @@ class LandingViewController: UIViewController, LandingViewModelOutput {
     }
     
     
-    
+  
     func fetchData() {
         viewModel.getCryptoList()
         self.tableView.reloadData()
@@ -100,6 +105,17 @@ extension LandingViewController: UITableViewDelegate, UITableViewDataSource {
         print(availableCurrencies)
         self.tableView.reloadData()
     }
+
     
-    
+    @objc func handleRefreshcontrol() {
+        //Update get prices then reload the table with new prices
+        viewModel.getCryptoList()
+        print(availableCurrencies)
+        self.tableView.reloadData()
+        
+        //Dismiss the refresh control
+        DispatchQueue.main.async {
+            self.tableView.refreshControl?.endRefreshing()
+        }
+    }
 }
